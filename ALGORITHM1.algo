@@ -1,0 +1,26 @@
+ALGORITHM count
+VAR 
+    ch: STRING
+    i:  INTEGER
+    nb_character:INTEGER
+    nb_vowels:INTEGER
+    nb_word:INTEGER
+    nb
+
+BEGIN
+    FOR i FROM 1 TO lengh(ch) DO
+    REPEAT
+        IF  ( ch(i)= [a,e,y,u,i,o,A,E,Y,U,I,O]) THEN 
+            nb_vowels=nb_vowels+1
+        END_IF
+        IF ( ch(i)= " ") THEN
+            nb_word=nb_word+1
+        ELSE nb_character=nb_character+1
+        END_IF
+        write('The number of lettres in the sentence is :', nb_character)
+        write('The number of words in the sentence is :', nb_word)
+        write('The number of vowels in the sentence is :', nb_vowels)
+        write('The length of the sentence is:',nb_character+nb_word+1)
+    UNTIL (ch(i)='.')
+    END_FOR
+END
